@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shravya Asam | Senior Business Analyst Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        surface: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#030712'
+                        },
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #0f172a; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        
+        .editorial-row {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .editorial-row:hover {
+            background-color: #ffffff;
+            transform: translateX(8px);
+            border-left: 3px solid #2563eb;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+        }
+        .editorial-row:hover .row-num {
+            color: #2563eb;
+            transform: scale(1.05);
+        }
+        .editorial-row:hover .row-arrow {
+            transform: translateX(6px);
+            color: #2563eb;
+        }
+        .drawer-mask {
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans bg-surface-50 text-surface-900 selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-surface-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex flex-col">
+                <span class="font-bold text-base tracking-tight text-surface-950 uppercase font-mono">Shravya Asam</span>
+                <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Senior Business Analyst</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-600">
+                <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-brand-600 transition-colors">Experience</a>
+                <a href="#portfolio" class="hover:text-brand-600 transition-colors">Portfolio</a>
+                <a href="#artifacts" class="hover:text-brand-600 transition-colors">Artifacts</a>
+                <a href="#skills" class="hover:text-brand-600 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors text-surface-950 font-bold border-b border-surface-950 pb-0.5">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-surface-900 p-2 text-xl focus:outline-none" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-surface-200 px-6 py-4 space-y-3 font-mono text-xs uppercase tracking-wider">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brand-600">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brand-600">About</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brand-600">Experience</a>
+            <a href="#portfolio" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brand-600">Portfolio</a>
+            <a href="#artifacts" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brand-600">Artifacts</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brand-600">Skills</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-brand-600 font-bold">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-36 pb-24 bg-surface-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-900 border border-surface-800 text-xs text-slate-300 mb-8 font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Open to Senior Business Analyst Roles</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight max-w-5xl">
+                SHRAVYA ASAM
+            </h1>
+            <p class="text-xl sm:text-2xl text-brand-500 font-mono mb-8 uppercase tracking-widest font-medium">
+                SENIOR BUSINESS ANALYST | AGILE BUSINESS ANALYST
+            </p>
+            
+            <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed mb-10 font-light">
+                6+ years of experience translating business needs into clear requirements, scalable processes and technology-enabled solutions across Banking, Payments, Technology, HRMS, CRM and E-commerce.
+            </p>
+            
+            <div class="flex flex-wrap items-center gap-4 mb-12">
+                <a href="#portfolio" class="px-8 py-4 bg-white text-surface-950 font-semibold text-xs uppercase tracking-widest hover:bg-slate-200 transition-all">
+                    View Selected Work
+                </a>
+                <a href="#contact" class="px-8 py-4 border border-surface-700 text-white font-semibold text-xs uppercase tracking-widest hover:bg-surface-800 transition-all">
+                    Get In Touch
+                </a>
+            </div>
+            
+            <div class="pt-8 border-t border-surface-800 flex flex-wrap items-center gap-y-3 gap-x-6 text-xs font-mono text-slate-400">
+                <span class="text-slate-200 font-semibold uppercase tracking-wider">Core Capabilities:</span>
+                <span>Requirements</span>
+                <span class="text-surface-700">•</span>
+                <span>Process</span>
+                <span class="text-surface-700">•</span>
+                <span>Agile</span>
+                <span class="text-surface-700">•</span>
+                <span>Data</span>
+                <span class="text-surface-700">•</span>
+                <span>UAT</span>
+                <span class="text-surface-700">•</span>
+                <span>Stakeholder Management</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white border-b border-surface-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                
+                <!-- Left Column: Portrait -->
+                <div class="lg:col-span-4">
+                    <div class="sticky top-28 bg-surface-50 p-3 rounded-lg border border-surface-200 shadow-sm max-w-sm mx-auto">
+                        <div class="aspect-[3/4] overflow-hidden rounded bg-surface-200">
+                            <img src="Shravya.png" alt="Shravya Asam" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Shravya+Asam'" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pt-4 pb-1 text-center font-mono">
+                            <h3 class="font-bold text-base text-surface-950">Shravya Asam</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Narrative & BA Delivery Flow -->
+                <div class="lg:col-span-8 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold text-brand-600 uppercase tracking-widest font-mono block mb-2">01 / Profile Overview</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-surface-950 tracking-tight mb-6">
+                            Bridging business intent with structured execution.
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed text-base mb-4">
+                            With over 6 years of experience across Banking, Payments, HRMS, and enterprise software ecosystems, I approach Business Analysis not simply as specification writing, but as a structured discipline for clarifying ambiguous problems, aligning stakeholders, and engineering robust delivery paths.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-base mb-4">
+                            My work integrates end-to-end requirement engineering (BRD, FRD, User Stories with Gherkin Acceptance Criteria), process transformation (BPMN 2.0, UML Use Cases), data analytics (SQL query validation, drop-off funnels), and Agile governance (backlog prioritization, dependency tracking, UAT traceability).
+                        </p>
+                    </div>
+
+                    <!-- How I Work Pipeline -->
+                    <div class="p-6 bg-surface-50 border border-surface-200 rounded-lg">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest font-mono block mb-6">How I Work — The BA Execution Pipeline</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                            <div class="bg-white p-3.5 border border-surface-200 rounded text-center">
+                                <span class="text-[10px] font-mono font-bold text-brand-600 block">STEP 01</span>
+                                <h4 class="text-xs font-bold text-surface-950 mt-1 uppercase">Understand</h4>
+                                <p class="text-[11px] text-slate-500 mt-1 leading-snug">Business problem & objectives</p>
+                            </div>
+                            <div class="bg-white p-3.5 border border-surface-200 rounded text-center">
+                                <span class="text-[10px] font-mono font-bold text-brand-600 block">STEP 02</span>
+                                <h4 class="text-xs font-bold text-surface-950 mt-1 uppercase">Analyze</h4>
+                                <p class="text-[11px] text-slate-500 mt-1 leading-snug">Processes, data & stakeholders</p>
+                            </div>
+                            <div class="bg-white p-3.5 border border-surface-200 rounded text-center">
+                                <span class="text-[10px] font-mono font-bold text-brand-600 block">STEP 03</span>
+                                <h4 class="text-xs font-bold text-surface-950 mt-1 uppercase">Define</h4>
+                                <p class="text-[11px] text-slate-500 mt-1 leading-snug">Scope, rules & user stories</p>
+                            </div>
+                            <div class="bg-white p-3.5 border border-surface-200 rounded text-center">
+                                <span class="text-[10px] font-mono font-bold text-brand-600 block">STEP 04</span>
+                                <h4 class="text-xs font-bold text-surface-950 mt-1 uppercase">Model</h4>
+                                <p class="text-[11px] text-slate-500 mt-1 leading-snug">BPMN, UML & API schemas</p>
+                            </div>
+                            <div class="bg-white p-3.5 border border-surface-200 rounded text-center">
+                                <span class="text-[10px] font-mono font-bold text-brand-600 block">STEP 05</span>
+                                <h4 class="text-xs font-bold text-surface-950 mt-1 uppercase">Deliver</h4>
+                                <p class="text-[11px] text-slate-500 mt-1 leading-snug">Agile sprints & UAT test signoff</p>
+                            </div>
+                            <div class="bg-white p-3.5 border border-surface-200 rounded text-center">
+                                <span class="text-[10px] font-mono font-bold text-brand-600 block">STEP 06</span>
+                                <h4 class="text-xs font-bold text-surface-950 mt-1 uppercase">Measure</h4>
+                                <p class="text-[11px] text-slate-500 mt-1 leading-snug">KPIs & post-release value</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verified Certifications & Dedicated Education Card -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                        <!-- Verified Certifications -->
+                        <div class="bg-white p-6 border border-surface-200 rounded-lg">
+                            <h3 class="text-xs font-mono font-bold text-surface-950 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                <i class="fas fa-certificate text-brand-600"></i> Verified Certifications
+                            </h3>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5 pb-2.5 border-b border-surface-100">
+                                    <i class="fas fa-check-circle text-brand-600 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-bold text-surface-950 block">Professional Scrum Product Owner I (PSPO™ I)</span>
+                                        <span class="text-slate-500 font-mono text-[11px]">Scrum.org</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2.5 pb-2.5 border-b border-surface-100">
+                                    <i class="fas fa-check-circle text-brand-600 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-bold text-surface-950 block">Certified Agile Business Analyst (CABA)</span>
+                                        <span class="text-slate-500 font-mono text-[11px]">IIBA Regulatory Institute / TrainSmart</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check-circle text-brand-600 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-bold text-surface-950 block">Scrum Foundation Professional Certificate (SFPC™)</span>
+                                        <span class="text-slate-500 font-mono text-[11px]">CertiProf</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Dedicated Education Card -->
+                        <div class="bg-white p-6 border border-surface-200 rounded-lg flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xs font-mono font-bold text-surface-950 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                    <i class="fas fa-graduation-cap text-brand-600"></i> Education
+                                </h3>
+                                <div class="space-y-1">
+                                    <h4 class="text-sm font-bold text-surface-950">B.Tech in Electronics & Communication</h4>
+                                    <p class="text-xs text-slate-600 font-medium">Malla Reddy Engineering College, Hyderabad</p>
+                                    <p class="text-xs font-mono text-slate-400 mt-1">Graduated: May 2018</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-surface-100 text-[11px] text-slate-500">
+                                <span class="font-semibold text-surface-900">Training:</span> IIBA-CCBA Trained Business Analyst
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-24 bg-surface-50 border-b border-surface-200">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="mb-14 text-center">
+                <span class="text-xs font-bold text-brand-600 uppercase tracking-widest font-mono block mb-2">02 / Career History</span>
+                <h2 class="text-3xl font-bold text-surface-950 tracking-tight">Professional Experience</h2>
+            </div>
+
+            <div class="space-y-10">
+                
+                <!-- Role 1 -->
+                <div class="bg-white p-8 border border-surface-200 rounded-lg shadow-2xs">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4 pb-4 border-b border-surface-100">
+                        <div>
+                            <h3 class="text-lg font-bold text-surface-950">Lead Business Analyst</h3>
+                            <p class="text-sm font-semibold text-brand-600 font-mono">Blunova System Pvt Ltd</p>
+                        </div>
+                        <span class="text-xs font-mono text-slate-400 bg-surface-100 px-2.5 py-1 rounded w-fit">Apr 2026 – Present</span>
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-outside pl-4 leading-relaxed">
+                        <li>Conducted market and competitor research across platforms to examine business workflows and user journeys.</li>
+                        <li>Prepared comparative research analysis documents covering product features, workflows, and functional capabilities.</li>
+                        <li>Performed gap analysis and documented business requirements, process models, and functional recommendations for future product planning.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="bg-white p-8 border border-surface-200 rounded-lg shadow-2xs">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4 pb-4 border-b border-surface-100">
+                        <div>
+                            <h3 class="text-lg font-bold text-surface-950">Business Analyst / Scrum Master</h3>
+                            <p class="text-sm font-semibold text-brand-600 font-mono">Sparity Soft Technologies <span class="text-slate-400 font-normal">| Clients: Deloitte, DTCC</span></p>
+                        </div>
+                        <span class="text-xs font-mono text-slate-400 bg-surface-100 px-2.5 py-1 rounded w-fit">Dec 2024 – Mar 2026</span>
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-outside pl-4 leading-relaxed">
+                        <li>Facilitated Agile execution across Scrum ceremonies, managing the product backlog in Azure DevOps, tracking team velocity, and boosting sprint efficiency by 20%.</li>
+                        <li>Elicited and authored BRDs, FRDs, User Stories with clear Acceptance Criteria, Data Flow Diagrams (DFD), and System Integration Maps, reducing clarification cycles by 25%.</li>
+                        <li>Delivered an automated HRMS solution that decreased administrative workload by 20% and enhanced requirement traceability by 40%.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="bg-white p-8 border border-surface-200 rounded-lg shadow-2xs">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4 pb-4 border-b border-surface-100">
+                        <div>
+                            <h3 class="text-lg font-bold text-surface-950">PMO / Business Analyst</h3>
+                            <p class="text-sm font-semibold text-brand-600 font-mono">Sira Consulting <span class="text-slate-400 font-normal">| Clients: Lend CRM, SHI</span></p>
+                        </div>
+                        <span class="text-xs font-mono text-slate-400 bg-surface-100 px-2.5 py-1 rounded w-fit">Oct 2022 – Dec 2024</span>
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-outside pl-4 leading-relaxed">
+                        <li>Led requirements gathering, functional analysis, and process mapping (UML, BPMN, DFD) for Loan Origination, Punchout Catalog Integration, and Contract Management systems.</li>
+                        <li>Defined scope, authored user stories, use cases, and functional specifications while facilitating Agile ceremonies to improve sprint delivery efficiency by 20%.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="bg-white p-8 border border-surface-200 rounded-lg shadow-2xs">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4 pb-4 border-b border-surface-100">
+                        <div>
+                            <h3 class="text-lg font-bold text-surface-950">Business Analyst</h3>
+                            <p class="text-sm font-semibold text-brand-600 font-mono">Accenture</p>
+                        </div>
+                        <span class="text-xs font-mono text-slate-400 bg-surface-100 px-2.5 py-1 rounded w-fit">Dec 2019 – Sep 2022</span>
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-outside pl-4 leading-relaxed">
+                        <li>Conducted requirements gathering and translated business needs into BRDs, FRDs, User Stories, and BPMN process flows in cross-functional Agile teams.</li>
+                        <li>Supported functional testing, UAT, and production releases for internal Review Tool and HR Software enhancements, reducing review cycle time by 20% and improving conversion by 15%.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-white border-b border-surface-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest font-mono block mb-2">03 / Case Study Index</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-surface-950 tracking-tight">Selected Portfolio Work</h2>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500 font-mono">
+                    Click any project to inspect the executive BA story & deliverables
+                </p>
+            </div>
+
+            <!-- 5 Large Editorial Rows -->
+            <div class="border-t border-surface-200">
+                
+                <!-- Project 01 -->
+                <div class="editorial-row py-8 px-4 sm:px-6 cursor-pointer" onclick="openCaseStudy('cs1')">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-6 sm:gap-8">
+                            <span class="row-num text-3xl sm:text-4xl font-mono font-bold text-slate-300 transition-all">01</span>
+                            <div>
+                                <span class="text-[11px] font-mono font-semibold uppercase tracking-widest text-brand-600 block mb-1">Banking & Financial Services</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-surface-950">DIGITAL SME LENDING & REPAYMENT PLATFORM</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-2xl leading-relaxed">
+                                    End-to-end digital lending transformation eliminating manual underwriting handoffs and establishing automated repayment tracking.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between lg:justify-end gap-6 text-right">
+                            <div class="text-left lg:text-right">
+                                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Primary Capability</span>
+                                <span class="text-xs font-medium text-surface-900">End-to-End BA & Process Modeling</span>
+                            </div>
+                            <span class="row-arrow text-slate-400 font-mono text-sm transition-transform"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="editorial-row py-8 px-4 sm:px-6 cursor-pointer" onclick="openCaseStudy('cs2')">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-6 sm:gap-8">
+                            <span class="row-num text-3xl sm:text-4xl font-mono font-bold text-slate-300 transition-all">02</span>
+                            <div>
+                                <span class="text-[11px] font-mono font-semibold uppercase tracking-widest text-brand-600 block mb-1">Enterprise Procurement & Supply Chain</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-surface-950">ENTERPRISE PROCUREMENT AGILE DELIVERY & SUPPLIER INTEGRATION</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-2xl leading-relaxed">
+                                    Agile Scrum management for Punchout catalog integration, story mapping Epics 1–4, and resolving external vendor API impediments.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between lg:justify-end gap-6 text-right">
+                            <div class="text-left lg:text-right">
+                                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Primary Capability</span>
+                                <span class="text-xs font-medium text-surface-900">Agile BA & Scrum Delivery</span>
+                            </div>
+                            <span class="row-arrow text-slate-400 font-mono text-sm transition-transform"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="editorial-row py-8 px-4 sm:px-6 cursor-pointer" onclick="openCaseStudy('cs3')">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-6 sm:gap-8">
+                            <span class="row-num text-3xl sm:text-4xl font-mono font-bold text-slate-300 transition-all">03</span>
+                            <div>
+                                <span class="text-[11px] font-mono font-semibold uppercase tracking-widest text-brand-600 block mb-1">HR Technology & Internal Operations</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-surface-950">EMPLOYEE SELF-SERVICE HR PLATFORM</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-2xl leading-relaxed">
+                                    User-centric journey redesign replacing fragmented email HR service requests with unified self-service workflows and dashboard wireframes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between lg:justify-end gap-6 text-right">
+                            <div class="text-left lg:text-right">
+                                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Primary Capability</span>
+                                <span class="text-xs font-medium text-surface-900">User-Centric BA & Wireframing</span>
+                            </div>
+                            <span class="row-arrow text-slate-400 font-mono text-sm transition-transform"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="editorial-row py-8 px-4 sm:px-6 cursor-pointer" onclick="openCaseStudy('cs4')">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-6 sm:gap-8">
+                            <span class="row-num text-3xl sm:text-4xl font-mono font-bold text-slate-300 transition-all">04</span>
+                            <div>
+                                <span class="text-[11px] font-mono font-semibold uppercase tracking-widest text-brand-600 block mb-1">E-Commerce & Digital Retail</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-surface-950">E-COMMERCE CHECKOUT & CONVERSION OPTIMISATION</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-2xl leading-relaxed">
+                                    Data-driven funnel attrition modeling, SQL metric extraction, Ishikawa root-cause investigation, and structured A/B testing strategy.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between lg:justify-end gap-6 text-right">
+                            <div class="text-left lg:text-right">
+                                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Primary Capability</span>
+                                <span class="text-xs font-medium text-surface-900">Data Analytics & Funnel Optimization</span>
+                            </div>
+                            <span class="row-arrow text-slate-400 font-mono text-sm transition-transform"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 05 -->
+                <div class="editorial-row py-8 px-4 sm:px-6 cursor-pointer" onclick="openCaseStudy('cs5')">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-6 sm:gap-8">
+                            <span class="row-num text-3xl sm:text-4xl font-mono font-bold text-slate-300 transition-all">05</span>
+                            <div>
+                                <span class="text-[11px] font-mono font-semibold uppercase tracking-widest text-brand-600 block mb-1">Artificial Intelligence & Document Automation</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-surface-950">AI-POWERED DOCUMENT ASSISTANT</h3>
+                                <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-2xl leading-relaxed">
+                                    Generative AI requirements engineering establishing mandatory Human-in-the-Loop governance (FR-008), exception gating, and AI risk controls.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between lg:justify-end gap-6 text-right">
+                            <div class="text-left lg:text-right">
+                                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Primary Capability</span>
+                                <span class="text-xs font-medium text-surface-900">AI Requirements & Governance</span>
+                            </div>
+                            <span class="row-arrow text-slate-400 font-mono text-sm transition-transform"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Artifact Library Section -->
+    <section id="artifacts" class="py-24 bg-surface-50 border-b border-surface-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest font-mono block mb-2">04 / Deliverable Catalog</span>
+                    <h2 class="text-3xl font-bold text-surface-950 tracking-tight">Business Analysis Artifact Library</h2>
+                    <p class="text-slate-500 text-sm mt-2 max-w-2xl">
+                        Explore core BA deliverables, their strategic purpose, methodology, and direct case-study execution context.
+                    </p>
+                </div>
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+                    <button onclick="filterArtifacts('all', this)" class="artifact-filter-btn px-3 py-1.5 rounded bg-surface-900 text-white font-semibold transition-all">
+                        All (8)
+                    </button>
+                    <button onclick="filterArtifacts('requirements', this)" class="artifact-filter-btn px-3 py-1.5 rounded bg-white border border-surface-200 text-slate-600 hover:text-surface-900 transition-all">
+                        Requirements
+                    </button>
+                    <button onclick="filterArtifacts('process', this)" class="artifact-filter-btn px-3 py-1.5 rounded bg-white border border-surface-200 text-slate-600 hover:text-surface-900 transition-all">
+                        Process & Modeling
+                    </button>
+                    <button onclick="filterArtifacts('agile', this)" class="artifact-filter-btn px-3 py-1.5 rounded bg-white border border-surface-200 text-slate-600 hover:text-surface-900 transition-all">
+                        Agile & Governance
+                    </button>
+                    <button onclick="filterArtifacts('data-qa', this)" class="artifact-filter-btn px-3 py-1.5 rounded bg-white border border-surface-200 text-slate-600 hover:text-surface-900 transition-all">
+                        Data & QA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Artifact Cards Grid -->
+            <div id="artifactGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- SPEC-01: BRD / FRD -->
+                <div onclick="inspectArtifact('brd')" data-category="requirements" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">SPEC-01</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 01 & 05</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">BRD / FRD Specification</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Structured requirements catalogs capturing scope boundaries, system interactions, and functional behaviors (FR-001–012).
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- MODEL-02: BPMN 2.0 Swimlanes -->
+                <div onclick="inspectArtifact('bpmn')" data-category="process" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">MODEL-02</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 01</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">BPMN 2.0 Swimlanes</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Cross-functional As-Is vs. To-Be workflows isolating 6 operational handoff delays across Borrower, Platform, Underwriting & Servicing.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- AGILE-03: User Stories & AC -->
+                <div onclick="inspectArtifact('stories')" data-category="agile" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">AGILE-03</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 02 & 03</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">User Stories & AC</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Agile backlog slicing formulated with testable Given-When-Then Gherkin criteria and clear definition-of-done boundaries.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- QA-04: Traceability (RTM) -->
+                <div onclick="inspectArtifact('rtm')" data-category="data-qa" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">QA-04</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 01</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">Traceability (RTM)</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Bi-directional traceability matrix linking business goals to functional specs, user stories, and signed-off UAT scenarios.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- DATA-05: SQL Analytics -->
+                <div onclick="inspectArtifact('sql')" data-category="data-qa" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">DATA-05</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 01 & 04</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">SQL Analytics & Queries</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Relational SQL queries investigating conversion bottlenecks (63.3% checkout) and isolating ledger payment variance.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- GOV-06: RACI Matrix -->
+                <div onclick="inspectArtifact('raci')" data-category="agile" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">GOV-06</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 01</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">RACI Governance Matrix</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            12-stage stakeholder accountability mapping governing ownership, approvals, and sign-offs between business, ops, and tech.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- UX-07: UI Wireframes -->
+                <div onclick="inspectArtifact('wireframe')" data-category="process" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">UX-07</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 03</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">UI Wireframes & Dashboards</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Structural wireframe blueprints translating employee journeys into intuitive 3-column self-service layouts.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- CHG-08: Change Requests (CR) -->
+                <div onclick="inspectArtifact('cr')" data-category="requirements" class="artifact-card bg-white p-6 border border-surface-200 rounded-lg hover:border-brand-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono font-bold text-brand-600 bg-brand-50 border border-brand-100 px-2 py-0.5 rounded">CHG-08</span>
+                            <span class="text-[10px] font-mono text-slate-400">CS 01</span>
+                        </div>
+                        <h3 class="text-base font-bold text-surface-950 group-hover:text-brand-600 transition-colors">Change Request (CR-001)</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Multi-tier impact assessment detailing technical, operational, and regression impacts across payment rails, UI, and ledger.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-surface-100 flex items-center justify-between text-[11px] font-mono text-brand-600">
+                        <span>Inspect Deliverable</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-white border-b border-surface-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-14">
+                <span class="text-xs font-bold text-brand-600 uppercase tracking-widest font-mono block mb-2">05 / Competency Matrix</span>
+                <h2 class="text-3xl font-bold text-surface-950 tracking-tight">Skills</h2>
+                <p class="text-slate-500 text-sm mt-2">Practical disciplines and verified competencies applied throughout the delivery lifecycle.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-surface-50 p-6 border border-surface-200 rounded-lg">
+                    <h3 class="font-mono text-xs font-bold text-brand-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <i class="fas fa-sitemap"></i> Requirements Engineering
+                    </h3>
+                    <ul class="space-y-2 text-xs text-slate-700">
+                        <li>• Requirement Elicitation & Gap Analysis</li>
+                        <li>• BRD, FRD, SRS & FSD Documentation</li>
+                        <li>• User Stories with Gherkin (Given-When-Then)</li>
+                        <li>• Business Rules Definition & Verification</li>
+                        <li>• Scope Baseline & Change Control Management</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-50 p-6 border border-surface-200 rounded-lg">
+                    <h3 class="font-mono text-xs font-bold text-brand-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <i class="fas fa-project-diagram"></i> Process & System Modeling
+                    </h3>
+                    <ul class="space-y-2 text-xs text-slate-700">
+                        <li>• BPMN 2.0 As-Is / To-Be Workflow Mapping</li>
+                        <li>• UML Use Case & Activity Diagrams</li>
+                        <li>• Data Flow Diagrams (DFD Level 0 & 1)</li>
+                        <li>• Low-Fidelity Wireframes & Journey Maps</li>
+                        <li>• Cross-System Integration & API Mapping</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-50 p-6 border border-surface-200 rounded-lg">
+                    <h3 class="font-mono text-xs font-bold text-brand-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <i class="fas fa-sync-alt"></i> Agile Delivery & Scrum
+                    </h3>
+                    <ul class="space-y-2 text-xs text-slate-700">
+                        <li>• Sprint Planning, Review & Retrospectives</li>
+                        <li>• Product Backlog Grooming & Slicing</li>
+                        <li>• Dependency & Impediment Resolution</li>
+                        <li>• Sprint Velocity & Burn-Down Monitoring</li>
+                        <li>• Release Readiness Checklist Audits</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-50 p-6 border border-surface-200 rounded-lg">
+                    <h3 class="font-mono text-xs font-bold text-brand-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <i class="fas fa-chart-line"></i> Data & Funnel Analytics
+                    </h3>
+                    <ul class="space-y-2 text-xs text-slate-700">
+                        <li>• SQL Querying (Aggregations, Conditional Counts)</li>
+                        <li>• Conversion Funnel Drop-off Quantification</li>
+                        <li>• Root Cause Analysis (Ishikawa Fishbone)</li>
+                        <li>• A/B Experiment Hypothesis Specification</li>
+                        <li>• Operational KPI Dashboards & Monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-50 p-6 border border-surface-200 rounded-lg">
+                    <h3 class="font-mono text-xs font-bold text-brand-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <i class="fas fa-clipboard-check"></i> Quality Assurance & Governance
+                    </h3>
+                    <ul class="space-y-2 text-xs text-slate-700">
+                        <li>• Requirement Traceability Matrix (RTM)</li>
+                        <li>• UAT Test Scenario Formulation & Sign-Off</li>
+                        <li>• AI Risk Controls & Human-in-the-Loop Rules</li>
+                        <li>• RACI Governance & Stakeholder Alignment</li>
+                        <li>• Regulatory Auditing & Field-Level Security</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface-50 p-6 border border-surface-200 rounded-lg">
+                    <h3 class="font-mono text-xs font-bold text-brand-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <i class="fas fa-tools"></i> Enterprise Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-700 pt-1">
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">JIRA</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">Azure DevOps</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">Confluence</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">MS Visio</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">Lucidchart</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">Balsamiq</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">MySQL</span>
+                        <span class="px-2.5 py-1 bg-white border border-surface-200 rounded">SharePoint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-surface-950 text-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">LET'S WORK TOGETHER</h2>
+            <p class="text-lg text-slate-300 font-light max-w-2xl mx-auto mb-12">
+                Open to Senior Business Analyst and Agile Business Analyst opportunities.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-sm font-mono mb-16">
+                <a href="mailto:shravyaasam070@gmail.com" class="hover:text-brand-500 transition-colors flex items-center gap-2">
+                    <i class="fas fa-envelope text-brand-600"></i> shravyaasam070@gmail.com
+                </a>
+                <span class="hidden sm:inline text-surface-700">•</span>
+                <a href="tel:+919502084512" class="hover:text-brand-500 transition-colors flex items-center gap-2">
+                    <i class="fas fa-phone text-brand-600"></i> +91-9502084512
+                </a>
+                <span class="hidden sm:inline text-surface-700">•</span>
+                <a href="https://www.linkedin.com/in/shravya-asam/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors flex items-center gap-2">
+                    <i class="fab fa-linkedin text-brand-600"></i> LinkedIn Profile
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-surface-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-4">
+                <span>© 2026 Shravya Asam</span>
+                <span>Hyderabad, Telangana, India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Slide-Over Drawer Container -->
+    <div id="caseStudyDrawer" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-surface-950/75 drawer-mask transition-opacity" onclick="closeCaseStudy()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-8 lg:pl-16">
+            <div class="w-full max-w-5xl bg-white shadow-2xl overflow-y-auto flex flex-col border-l border-surface-200">
+                
+                <!-- Sticky Header -->
+                <div class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-surface-200 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span id="drawerBadge" class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-brand-50 text-brand-700 border border-brand-200">PROJECT 01</span>
+                        <span class="text-xs text-slate-400 font-mono hidden sm:inline">• Executive BA Dossier</span>
+                    </div>
+                    <button onclick="closeCaseStudy()" class="w-9 h-9 rounded-full bg-surface-100 hover:bg-surface-200 text-slate-600 flex items-center justify-center transition-colors focus:outline-none" aria-label="Close Case Study">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Dynamic Content Container -->
+                <div id="drawerContent" class="p-6 sm:p-10 space-y-12">
+                    <!-- Dynamic template injected by JavaScript -->
+                </div>
+
+                <!-- Footer Dismiss Action -->
+                <div class="mt-auto border-t border-surface-200 p-6 bg-surface-50 flex items-center justify-between">
+                    <span class="text-xs font-mono text-slate-500">Shravya Asam Portfolio</span>
+                    <button onclick="closeCaseStudy()" class="px-6 py-2.5 bg-surface-900 hover:bg-surface-800 text-white text-xs font-mono font-semibold rounded uppercase tracking-wider transition-colors">
+                        Close Dossier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artifact Info Modal -->
+    <div id="artifactModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-surface-950/70 drawer-mask" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-lg max-w-lg w-full p-6 border border-surface-200 shadow-2xl relative">
+            <button onclick="closeArtifactModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 focus:outline-none" aria-label="Close modal">
+                <i class="fas fa-times text-base"></i>
+            </button>
+            <span id="artCategory" class="text-[10px] font-mono font-bold text-brand-600 uppercase tracking-widest block mb-1">SPECIFICATION</span>
+            <h3 id="artTitle" class="text-lg font-bold text-surface-950 mb-3">Artifact Title</h3>
+            <div class="space-y-3 text-xs text-slate-600 leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-surface-900 font-mono text-[11px] uppercase">What it is:</h4>
+                    <p id="artWhat" class="mt-0.5">Explanation</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-surface-900 font-mono text-[11px] uppercase">Why a BA uses it:</h4>
+                    <p id="artWhy" class="mt-0.5">Explanation</p>
+                </div>
+                <div class="pt-2 border-t border-surface-100">
+                    <h4 class="font-bold text-surface-900 font-mono text-[11px] uppercase">Demonstrated In:</h4>
+                    <p id="artWhere" class="text-brand-600 font-medium mt-0.5">Case Study Context</p>
+                </div>
+            </div>
+            <div class="mt-6 flex items-center justify-between pt-3 border-t border-surface-100">
+                <span class="text-[11px] font-mono text-slate-400">Evidence from Primary Documentation</span>
+                <button id="artActionBtn" class="px-4 py-2 bg-surface-900 hover:bg-surface-800 text-white text-xs font-mono font-semibold rounded transition-colors">
+                    Inspect in Case Study →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data models for the 5 Case Studies derived directly from source documentation
+        const caseStudies = {
+            'cs1': {
+                num: '01',
+                title: 'DIGITAL SME LENDING & REPAYMENT PLATFORM',
+                domain: 'Banking & Financial Services',
+                pdfFile: 'Case_Study_01_SME_Lending.pdf',
+                focus: 'End-to-End Business Analysis & Process Modeling',
+                type: 'Simulated Business Analysis Case Study',
+                summary: 'Re-architected the fragmented SME commercial loan origination and servicing lifecycle into an automated digital workflow.',
+                snapshot: {
+                    problem: 'Disjointed manual handoffs across RM, Underwriting, and Servicing causing multi-week turnaround times and untracked reconciliation leaks.',
+                    role: 'Lead Senior Business Analyst',
+                    approach: 'As-Is/To-Be BPMN 2.0 mapping, multi-tiered BR-001–010 rule catalogs, FR-001–012 specifications, SQL exception auditing, and RTM traceability.',
+                    artifacts: 'BPMN 2.0 Models, FR-001–012, BR-001–010, RACI Matrix, SQL Validation, RTM, CR-001 Impact Spec'
+                },
+                approachSteps: [
+                    { step: 'PROBLEM', desc: 'Identified manual friction across RM, Credit, and Servicing handoffs' },
+                    { step: 'ANALYZE', desc: 'RACI stakeholder mapping & current-state failure isolation' },
+                    { step: 'DEFINE', desc: 'Authored FR-001 to FR-012 & BR-001 to BR-010 business logic rules' },
+                    { step: 'MODEL', desc: 'Developed future-state BPMN 2.0 swimlanes & UML use case schemas' },
+                    { step: 'DELIVER', desc: 'Engineered RTM traceability & validated CR-001 digital payment channel' },
+                    { step: 'VALIDATE', desc: 'Audited UAT-001 through UAT-006 test outcomes & SQL reconciliation' }
+                ],
+                keyArtifactsStrip: [
+                    { name: 'BRD / FRD', desc: 'FR-001 through FR-012 functional requirements catalog' },
+                    { name: 'BPMN 2.0', desc: 'Cross-functional 4-tier future-state swimlane model' },
+                    { name: 'Business Rules', desc: 'BR-001 to BR-010 origination & reconciliation constraints' },
+                    { name: 'RACI Matrix', desc: 'Cross-functional role accountability mapping across 12 stages' },
+                    { name: 'SQL Analytics', desc: 'Payment success rates & mismatch detection queries' },
+                    { name: 'RTM & UAT', desc: 'Full traceability matrix linking requirements to UAT test cases' }
+                ],
+                baRole: [
+                    'Conducted stakeholder interviews across Relationship Managers, Underwriters, and Servicing Leads',
+                    'Engineered As-Is and To-Be BPMN 2.0 process models isolating 6 operational handoff bottlenecks',
+                    'Authored Functional Requirements (FR-001 to FR-012) and Business Rules (BR-001 to BR-010)',
+                    'Developed UML Use Case models defining associations across SME Borrowers, Underwriters, and Ops',
+                    'Constructed end-to-end Requirement Traceability Matrix (RTM) linking FRs to User Stories and UAT',
+                    'Authored Change Request CR-001 impact analysis assessing downstream core accounting updates'
+                ],
+                baThinking: {
+                    problem: 'SME loan origination required 14 sequential manual handoffs between Relationship Managers, Credit, and Operations with no shared state.',
+                    analysis: 'Constructed RACI matrix and As-Is process models showing duplicate data entry and untracked reconciliation exceptions.',
+                    gap: 'Lack of automated pre-qualification filtering and disconnected payment gateway reconciliation led to operational bottlenecks.',
+                    decision: 'Specified digital eligibility gateway (FR-004) and automated reconciliation exception queue (FR-010, BR-008).',
+                    validation: 'Executed test scenarios UAT-001 to UAT-006 confirming validation error routing and conditional underwriter sign-off.',
+                    value: 'Estimated 65% reduction in processing cycle time and real-time payment auditability.'
+                },
+                renderDetails: function() {
+                    return `
+                        <!-- Process Transformation (BPMN 2.0 Swimlane) -->
+                        <div class="space-y-4">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> BPMN 2.0 Future-State Process Architecture
+                            </h3>
+                            <div class="p-4 bg-white border border-surface-200 rounded-lg overflow-x-auto text-xs font-mono">
+                                <div class="min-w-[700px] space-y-3">
+                                    <div class="flex items-center gap-3 p-3 bg-surface-50 border-l-4 border-slate-700 rounded">
+                                        <span class="w-28 font-bold text-surface-900 shrink-0">SME BORROWER</span>
+                                        <span class="px-3 py-1 bg-white border rounded">1. Select Product</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border rounded">2. Submit Details & Docs</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border rounded">9. Accept Offer (eSign)</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border rounded">12. Make Repayment</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 bg-blue-50 border-l-4 border-brand-600 rounded">
+                                        <span class="w-28 font-bold text-brand-900 shrink-0">DIGITAL PLATFORM</span>
+                                        <span class="px-3 py-1 bg-white border border-blue-200 rounded text-brand-700 font-semibold">4. Auto Eligibility Check</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border border-blue-200 rounded">5. Route to Underwriting</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border border-blue-200 rounded">11. Originate Loan</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border border-blue-200 rounded text-brand-700 font-semibold">14. Auto-Reconcile</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 bg-amber-50 border-l-4 border-amber-600 rounded">
+                                        <span class="w-28 font-bold text-amber-900 shrink-0">UNDERWRITING</span>
+                                        <span class="px-3 py-1 bg-white border border-amber-200 rounded">7. Review Application</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border border-amber-200 rounded font-semibold">8. Decision (Approve/Condition/Decline)</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 bg-indigo-50 border-l-4 border-indigo-600 rounded">
+                                        <span class="w-28 font-bold text-indigo-900 shrink-0">SERVICING / OPS</span>
+                                        <span class="px-3 py-1 bg-white border border-indigo-200 rounded">10. Setup Account</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border border-indigo-200 rounded">12. Disburse Funds</span>
+                                        <i class="fas fa-arrow-right text-slate-400"></i>
+                                        <span class="px-3 py-1 bg-white border border-indigo-200 rounded">18. Manage Exceptions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Requirements Specification & Business Rules Explorer -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-3">
+                                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded bg-brand-600"></span> Functional Requirements (FR-001–012)
+                                </h3>
+                                <div class="bg-surface-50 border border-surface-200 rounded-lg p-4 space-y-2.5 text-xs">
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-brand-600">FR-002:</span> Customer digital product discovery & application intake.
+                                    </div>
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-brand-600">FR-004:</span> Automated validation against configured eligibility criteria.
+                                    </div>
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-brand-600">FR-007:</span> Multi-tier decision recording (Approve / Conditional / Decline).
+                                    </div>
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-brand-600">FR-008:</span> Loan record origination upon satisfaction of all conditions.
+                                    </div>
+                                    <div>
+                                        <span class="font-mono font-bold text-brand-600">FR-010:</span> Automatic reconciliation exception flagging on payment mismatch.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded bg-brand-600"></span> Business Rules Engine (BR-001–010)
+                                </h3>
+                                <div class="bg-surface-50 border border-surface-200 rounded-lg p-4 space-y-2.5 text-xs">
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-slate-900">BR-001:</span> Mandatory fields required before application evaluation gate.
+                                    </div>
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-slate-900">BR-004:</span> Loan origination prohibited until conditional underwriting sign-off.
+                                    </div>
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-slate-900">BR-006:</span> Ledger balance updates executed ONLY upon gateway confirmation.
+                                    </div>
+                                    <div class="pb-2 border-b border-surface-200">
+                                        <span class="font-mono font-bold text-slate-900">BR-007:</span> Duplicate payment transactions isolated and placed on hold.
+                                    </div>
+                                    <div>
+                                        <span class="font-mono font-bold text-slate-900">BR-008:</span> Expected vs received discrepancies recorded as exceptions.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Analytics & SQL Validation -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> SQL Data Analysis & Reconciliation Verification
+                            </h3>
+                            <div class="bg-surface-950 text-slate-300 p-5 rounded-lg font-mono text-xs overflow-x-auto space-y-2">
+                                <span class="text-slate-500">// Extracting Reconciliation Mismatches Across Active Portfolios</span>
+                                <p class="text-brand-400">SELECT payment_id, loan_id, payment_amount, expected_amount, (expected_amount - payment_amount) AS variance</p>
+                                <p class="text-white">FROM payments</p>
+                                <p class="text-brand-400">WHERE payment_amount &lt;&gt; expected_amount AND payment_status = 'COMPLETED';</p>
+                                <div class="pt-3 border-t border-surface-800 text-[11px] text-slate-400">
+                                    <span class="text-emerald-400 font-bold">Illustrative BA Finding:</span> Identified 12 reconciliation exceptions representing 2% of total payments requiring automated ops escalation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Traceability Matrix (RTM) -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> Requirement Traceability Matrix (RTM Extract)
+                            </h3>
+                            <div class="overflow-x-auto border border-surface-200 rounded-lg">
+                                <table class="w-full text-left text-xs font-mono">
+                                    <thead class="bg-surface-100 border-b border-surface-200 text-surface-900">
+                                        <tr>
+                                            <th class="p-3">Business Requirement</th>
+                                            <th class="p-3">Functional Req</th>
+                                            <th class="p-3">User Story</th>
+                                            <th class="p-3">UAT Scenario</th>
+                                            <th class="p-3">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-surface-200 bg-white">
+                                        <tr>
+                                            <td class="p-3 font-sans font-medium">Digital loan application</td>
+                                            <td class="p-3 text-brand-600 font-bold">FR-002</td>
+                                            <td class="p-3">US-001</td>
+                                            <td class="p-3">UAT-001</td>
+                                            <td class="p-3 text-emerald-600 font-bold">PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-sans font-medium">Eligibility evaluation</td>
+                                            <td class="p-3 text-brand-600 font-bold">FR-004</td>
+                                            <td class="p-3">US-002</td>
+                                            <td class="p-3">UAT-003</td>
+                                            <td class="p-3 text-emerald-600 font-bold">PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-sans font-medium">Loan decision management</td>
+                                            <td class="p-3 text-brand-600 font-bold">FR-007</td>
+                                            <td class="p-3">US-004</td>
+                                            <td class="p-3">UAT-004</td>
+                                            <td class="p-3 text-emerald-600 font-bold">PASSED</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-sans font-medium">Payment reconciliation</td>
+                                            <td class="p-3 text-brand-600 font-bold">FR-010</td>
+                                            <td class="p-3">US-006</td>
+                                            <td class="p-3">UAT-006</td>
+                                            <td class="p-3 text-emerald-600 font-bold">PASSED</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Change Request CR-001 -->
+                        <div class="p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="font-mono font-bold text-amber-900">CHANGE REQUEST: CR-001</span>
+                                <span class="px-2 py-0.5 bg-amber-200 text-amber-900 rounded font-mono text-[10px] font-bold">HIGH IMPACT</span>
+                            </div>
+                            <p class="text-amber-900 leading-relaxed">
+                                <span class="font-bold">Description:</span> Introduction of alternate instant repayment rails to reduce delinquency.
+                            </p>
+                            <p class="text-amber-800 text-[11px]">
+                                <span class="font-bold">Downstream Impact Assessed:</span> Customer Payment UI, Payment Integration API, Loan Balance Ledger updates, and Reconciliation transaction mapping.
+                            </p>
+                        </div>
+                    `;
+                }
+            },
+            'cs2': {
+                num: '02',
+                title: 'ENTERPRISE PROCUREMENT AGILE DELIVERY & SUPPLIER INTEGRATION',
+                domain: 'Enterprise / Supply Chain',
+                pdfFile: 'Case_Study_02_Procurement.pdf',
+                focus: 'Agile Business Analysis & Scrum Master Delivery',
+                type: 'Simulated Agile / Business Analysis Case Study',
+                summary: 'Structured Agile product delivery connecting corporate enterprise requesters with approved suppliers via a Punchout integration platform.',
+                snapshot: {
+                    problem: 'Decentralized procurement spending with off-contract purchases and lack of integration with vendor Punchout catalogs.',
+                    role: 'Agile Business Analyst / Scrum Master',
+                    approach: 'Story mapping across Epics 1–4, sprint cadence management, external API impediment tracking, and release readiness gating.',
+                    artifacts: 'Product Backlog, Sprint 1 Health Dashboard, Impediment Tracker D-01–03, Punchout Flow, Release Plan'
+                },
+                approachSteps: [
+                    { step: 'VISION', desc: 'Framed corporate procurement vision & unified catalog goals' },
+                    { step: 'EPICS', desc: 'Decomposed scope into 4 core capability epics & user stories' },
+                    { step: 'REFINEMENT', desc: 'Clarified acceptance criteria & identified vendor API blockers' },
+                    { step: 'PLANNING', desc: 'Facilitated Sprint 1-6 backlog allocations and velocity targets' },
+                    { step: 'DELIVERY', desc: 'Resolved external supplier impediment D-01 and tracked burn-down' },
+                    { step: 'RELEASE', desc: 'Executed 7-point release readiness checklist for staging rollout' }
+                ],
+                keyArtifactsStrip: [
+                    { name: 'Product Backlog', desc: 'Decomposed 4 epics into prioritized sprint user stories' },
+                    { name: 'Sprint Dashboard', desc: 'Sprint 1 health overview tracking 80% commitment delivery' },
+                    { name: 'Impediment Log', desc: 'D-01 to D-03 vendor API dependency mitigation log' },
+                    { name: 'Punchout Flow', desc: 'cXML cart-return & purchase order transmission architecture' },
+                    { name: 'Retrospective', desc: 'Continuous improvement action items on external dependencies' },
+                    { name: 'Release Checklist', desc: '7-point quality gate for staging-to-production promotion' }
+                ],
+                baRole: [
+                    'Facilitated Sprint Planning, Daily Scrums, Sprint Reviews, and Retrospectives',
+                    'Managed product backlog and groomed User Stories with Acceptance Criteria in Azure DevOps',
+                    'Created Punchout Catalog Integration workflow diagrams detailing cart-return scenarios',
+                    'Maintained Dependency & Impediment Log (D-01 to D-03) mitigating supplier API access blockers',
+                    'Monitored team sprint health (80% completion rate) and managed carry-over story allocations',
+                    'Enforced 7-point Release Readiness Checklist ensuring UAT and business approval gates'
+                ],
+                baThinking: {
+                    problem: 'Corporate purchasing took 12 business days per order with rampant rogue spending outside approved supplier catalogs.',
+                    analysis: 'Deconstructed process into 4 distinct Epics (Supplier Catalog, Purchase Request, Approval Workflow, Supplier Integration).',
+                    gap: 'External supplier API access was uncoordinated, threatening sprint commitments and release milestones.',
+                    decision: 'Established early dependency mapping in backlog refinement and created error-handling paths for cart return failures.',
+                    validation: 'Audited Sprint 1 health (8 out of 10 stories delivered, 2 carried over safely due to vendor access) and completed retrospective action items.',
+                    value: 'Achieved 80% sprint velocity predictability and standardized vendor order transmission.'
+                },
+                renderDetails: function() {
+                    return `
+                        <!-- Agile Lifecycle Architecture -->
+                        <div class="space-y-4">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> Agile Scrum Delivery Lifecycle
+                            </h3>
+                            <div class="p-4 bg-white border border-surface-200 rounded-lg text-xs font-mono">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="px-3 py-1.5 bg-surface-100 border rounded font-semibold text-surface-950">Product Vision</span>
+                                    <i class="fas fa-arrow-right text-slate-400"></i>
+                                    <span class="px-3 py-1.5 bg-surface-100 border rounded font-semibold text-surface-950">Epics & Story Map</span>
+                                    <i class="fas fa-arrow-right text-slate-400"></i>
+                                    <span class="px-3 py-1.5 bg-surface-100 border rounded font-semibold text-surface-950">Backlog Refinement</span>
+                                    <i class="fas fa-arrow-right text-slate-400"></i>
+                                    <span class="px-3 py-1.5 bg-brand-50 border border-brand-200 text-brand-700 font-bold rounded">Sprint Planning</span>
+                                    <i class="fas fa-arrow-right text-slate-400"></i>
+                                    <span class="px-3 py-1.5 bg-surface-100 border rounded font-semibold text-surface-950">Daily Scrum</span>
+                                    <i class="fas fa-arrow-right text-slate-400"></i>
+                                    <span class="px-3 py-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold rounded">Sprint Review & Release</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Backlog Story Map: Epics 1-4 -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> Product Backlog & Story Map (Epics 1–4)
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                <div class="p-3.5 bg-surface-50 border border-surface-200 rounded">
+                                    <span class="font-mono text-[10px] text-brand-600 font-bold block">EPIC 01</span>
+                                    <h4 class="text-xs font-bold text-surface-950 mt-1">Supplier Catalog</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1">Catalog access, product search, price & availability, add to cart.</p>
+                                </div>
+                                <div class="p-3.5 bg-surface-50 border border-surface-200 rounded">
+                                    <span class="font-mono text-[10px] text-brand-600 font-bold block">EPIC 02</span>
+                                    <h4 class="text-xs font-bold text-surface-950 mt-1">Purchase Request</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1">PR generation, review selected items, submit request, tracking.</p>
+                                </div>
+                                <div class="p-3.5 bg-surface-50 border border-surface-200 rounded">
+                                    <span class="font-mono text-[10px] text-brand-600 font-bold block">EPIC 03</span>
+                                    <h4 class="text-xs font-bold text-surface-950 mt-1">Approval Workflow</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1">Manager approval, procurement approval, notifications, resubmissions.</p>
+                                </div>
+                                <div class="p-3.5 bg-surface-50 border border-surface-200 rounded">
+                                    <span class="font-mono text-[10px] text-brand-600 font-bold block">EPIC 04</span>
+                                    <h4 class="text-xs font-bold text-surface-950 mt-1">Supplier Integration</h4>
+                                    <p class="text-[11px] text-slate-500 mt-1">Supplier auth, Punchout cXML cart return, PO dispatch.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sprint 1 Health & Dependency Log -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="p-4 bg-white border border-surface-200 rounded-lg space-y-3">
+                                <span class="font-mono text-xs font-bold text-surface-950 uppercase tracking-wider block">Sprint 1 Health Overview</span>
+                                <div class="grid grid-cols-4 gap-2 text-center font-mono">
+                                    <div class="p-2 bg-surface-50 rounded border">
+                                        <span class="text-[10px] text-slate-500 block">COMMITTED</span>
+                                        <span class="text-base font-bold text-surface-900">10</span>
+                                    </div>
+                                    <div class="p-2 bg-emerald-50 text-emerald-700 rounded border border-emerald-200">
+                                        <span class="text-[10px] block">COMPLETED</span>
+                                        <span class="text-base font-bold">8</span>
+                                    </div>
+                                    <div class="p-2 bg-amber-50 text-amber-700 rounded border border-amber-200">
+                                        <span class="text-[10px] block">CARRY-OVER</span>
+                                        <span class="text-base font-bold">2</span>
+                                    </div>
+                                    <div class="p-2 bg-rose-50 text-rose-700 rounded border border-rose-200">
+                                        <span class="text-[10px] block">BLOCKED</span>
+                                        <span class="text-base font-bold">1</span>
+                                    </div>
+                                </div>
+                                <div class="text-xs text-slate-600 space-y-1">
+                                    <p><strong class="text-surface-900">Goal:</strong> Enable employees to browse approved catalogs & submit PRs.</p>
+                                    <p class="text-emerald-600 font-semibold">Sprint Status: On Track (80% story completion)</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 bg-white border border-surface-200 rounded-lg space-y-3">
+                                <span class="font-mono text-xs font-bold text-surface-950 uppercase tracking-wider block">Impediment & Dependency Log</span>
+                                <div class="space-y-2 text-xs">
+                                    <div class="p-2 bg-surface-50 border rounded flex justify-between items-center">
+                                        <div>
+                                            <span class="font-mono font-bold text-rose-600">D-01</span>
+                                            <span class="text-slate-700 ml-1">Supplier Catalog API access pending</span>
+                                        </div>
+                                        <span class="font-mono text-[10px] px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold">RESOLVED</span>
+                                    </div>
+                                    <div class="p-2 bg-surface-50 border rounded flex justify-between items-center">
+                                        <div>
+                                            <span class="font-mono font-bold text-amber-600">D-02</span>
+                                            <span class="text-slate-700 ml-1">Approval hierarchy rule clarification</span>
+                                        </div>
+                                        <span class="font-mono text-[10px] px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold">RESOLVED</span>
+                                    </div>
+                                    <div class="p-2 bg-surface-50 border rounded flex justify-between items-center">
+                                        <div>
+                                            <span class="font-mono font-bold text-amber-600">D-03</span>
+                                            <span class="text-slate-700 ml-1">Integration test data unavailable</span>
+                                        </div>
+                                        <span class="font-mono text-[10px] px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-bold">IN PROGRESS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Integration Exception Scenarios -->
+                        <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg space-y-2 text-xs">
+                            <span class="font-mono font-bold text-surface-950 uppercase tracking-wider block">Supplier Punchout Integration Scenarios Handled</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-[11px] font-mono text-slate-700">
+                                <div class="p-2 bg-white border rounded">Catalog Down → Show friendly retry</div>
+                                <div class="p-2 bg-white border rounded">Item Discontinued → Suggest alternatives</div>
+                                <div class="p-2 bg-white border rounded">Price Shift → Revalidate before submit</div>
+                                <div class="p-2 bg-white border rounded">Cart Failure → Retain draft session</div>
+                            </div>
+                        </div>
+                    `;
+                }
+            },
+            'cs3': {
+                num: '03',
+                title: 'EMPLOYEE SELF-SERVICE HR PLATFORM',
+                domain: 'Human Resources / Internal Tools',
+                pdfFile: 'Case_Study_03_HR_Platform.pdf',
+                focus: 'User-Centric Business Analysis & UI Wireframing',
+                type: 'Simulated Business Analysis Case Study',
+                summary: 'Re-engineered employee support by replacing multi-hop email chains with an automated self-service portal and intuitive wireframes.',
+                snapshot: {
+                    problem: 'Employees relied on manual email exchanges with HR for routine leave and attendance, causing high cycle delays and lost inquiries.',
+                    role: 'Business Analyst (Process & UX)',
+                    approach: 'Employee journey mapping, As-Is vs To-Be contrast modeling, MoSCoW prioritization, and responsive dashboard wireframes.',
+                    artifacts: 'Employee Journey Map, As-Is/To-Be Models, MoSCoW Table, Dashboard Wireframe, User Stories US-001–003'
+                },
+                approachSteps: [
+                    { step: 'JOURNEY', desc: 'Mapped employee path from service request through resolution' },
+                    { step: 'PAIN POINTS', desc: 'Isolated email latency and lack of status visibility' },
+                    { step: 'PRIORITIZE', desc: 'Applied MoSCoW matrix to separate core leave from nice-to-haves' },
+                    { step: 'WIREFRAMES', desc: 'Drafted low-fidelity portal wireframes and quick-action cards' },
+                    { step: 'RULES', desc: 'Formulated business constraints for non-modifiable closed requests' },
+                    { step: 'STORIES', desc: 'Authored US-001 to US-003 user stories with acceptance gates' }
+                ],
+                keyArtifactsStrip: [
+                    { name: 'Journey Map', desc: 'Employee service path from login to final notification' },
+                    { name: 'MoSCoW Matrix', desc: 'Prioritization catalog separating Must-Haves from Could-Haves' },
+                    { name: 'Wireframe Layout', desc: 'Recreated HR Portal desktop layout and quick-action cards' },
+                    { name: 'US-001–003', desc: 'Leave, Attendance, and HR service request user stories' },
+                    { name: 'Workflow Rules', desc: 'Request routing and post-closure audit protection logic' }
+                ],
+                baRole: [
+                    'Mapped employee user journey from portal login through manager approval routing',
+                    'Identified As-Is pain points across manual email handling and untracked service requests',
+                    'Conducted MoSCoW prioritization establishing Leave and Attendance as Must-Haves',
+                    'Designed functional UI wireframe layouts with quick-action cards and balance widgets',
+                    'Authored User Stories (US-001 to US-003) with precise validation acceptance criteria',
+                    'Formulated business rules ensuring closed requests remain immutable for audit logs'
+                ],
+                baThinking: {
+                    problem: 'HR team was overwhelmed with 800+ repetitive email inquiries monthly regarding leave balances and policy inquiries.',
+                    analysis: 'Captured current-state journey showing 4-day lag times and zero audit visibility into pending requests.',
+                    gap: 'No single pane of glass existed for employees to check attendance, view leave balances, or track active request states.',
+                    decision: 'Designed a unified self-service portal wireframe featuring a 3-column dashboard and automated workflow routing.',
+                    validation: 'Drafted and validated User Stories US-001 to US-003 with automated day calculation and manager routing criteria.',
+                    value: 'Targeted a 20% reduction in administrative workload and faster turnaround for employee requests.'
+                },
+                renderDetails: function() {
+                    return `
+                        <!-- Journey & Before/After Comparison -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="p-4 bg-rose-50 border border-rose-200 rounded-lg text-xs space-y-2">
+                                <span class="font-mono font-bold text-rose-800 uppercase tracking-wider block">As-Is Experience (Manual Friction)</span>
+                                <div class="flex items-center gap-2 text-rose-900 font-mono">
+                                    <span>Email HR Desk</span> <i class="fas fa-arrow-right"></i>
+                                    <span>Manual Follow-up</span> <i class="fas fa-arrow-right"></i>
+                                    <span>Delayed Answer</span>
+                                </div>
+                                <p class="text-rose-700 text-[11px] mt-1 leading-relaxed">
+                                    Zero request tracking, lost email threads, and significant administrative backlog for HR operations.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-xs space-y-2">
+                                <span class="font-mono font-bold text-emerald-800 uppercase tracking-wider block">To-Be Experience (Self-Service)</span>
+                                <div class="flex items-center gap-2 text-emerald-900 font-mono">
+                                    <span>HR Portal</span> <i class="fas fa-arrow-right"></i>
+                                    <span>Automated Flow</span> <i class="fas fa-arrow-right"></i>
+                                    <span>Real-Time Status</span>
+                                </div>
+                                <p class="text-emerald-700 text-[11px] mt-1 leading-relaxed">
+                                    Automated business rules, instant leave balance calculation, and real-time approval tracking.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Recreated UI Wireframe Dashboard -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> Conceptual Portal Wireframe (Low-Fidelity Architecture)
+                            </h3>
+                            <div class="border border-surface-300 rounded-lg p-4 bg-white space-y-4">
+                                <!-- App Chrome Mockup -->
+                                <div class="flex items-center justify-between pb-3 border-b border-surface-200 text-xs font-mono">
+                                    <div class="flex items-center gap-2 font-bold text-surface-900">
+                                        <i class="fas fa-cubes text-brand-600"></i> MyHR Portal
+                                    </div>
+                                    <span class="text-slate-400">Search policies, leaves, documents...</span>
+                                    <div class="flex items-center gap-2 text-slate-600">
+                                        <i class="fas fa-bell"></i>
+                                        <span class="font-bold">Shravya Asam</span>
+                                    </div>
+                                </div>
+                                <!-- Dashboard Content Mockup -->
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs font-mono">
+                                    <div class="p-3 bg-blue-50 border border-blue-200 rounded">
+                                        <span class="text-[10px] text-slate-500 block">LEAVE BALANCE</span>
+                                        <span class="text-xl font-bold text-blue-900">12 Days</span>
+                                        <span class="text-[10px] text-brand-600 block mt-1">Apply Leave →</span>
+                                    </div>
+                                    <div class="p-3 bg-emerald-50 border border-emerald-200 rounded">
+                                        <span class="text-[10px] text-slate-500 block">PRESENT TODAY</span>
+                                        <span class="text-xl font-bold text-emerald-900">Yes • On Time</span>
+                                        <span class="text-[10px] text-emerald-600 block mt-1">View Attendance →</span>
+                                    </div>
+                                    <div class="p-3 bg-amber-50 border border-amber-200 rounded">
+                                        <span class="text-[10px] text-slate-500 block">PENDING REQUESTS</span>
+                                        <span class="text-xl font-bold text-amber-900">2 In Review</span>
+                                        <span class="text-[10px] text-amber-600 block mt-1">Track Status →</span>
+                                    </div>
+                                    <div class="p-3 bg-purple-50 border border-purple-200 rounded">
+                                        <span class="text-[10px] text-slate-500 block">HR HELPDESK</span>
+                                        <span class="text-xl font-bold text-purple-900">Active</span>
+                                        <span class="text-[10px] text-purple-600 block mt-1">Raise Ticket →</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Prioritization & User Stories -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-3">
+                                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded bg-brand-600"></span> MoSCoW Prioritization Matrix
+                                </h3>
+                                <div class="border border-surface-200 rounded-lg overflow-hidden text-xs">
+                                    <table class="w-full text-left font-mono">
+                                        <tbody class="divide-y divide-surface-200">
+                                            <tr class="bg-surface-50"><td class="p-2.5 font-bold text-brand-600">MUST HAVE</td><td class="p-2.5 font-sans">Leave Request, Attendance View, Employee Profile</td></tr>
+                                            <tr><td class="p-2.5 font-bold text-slate-700">SHOULD HAVE</td><td class="p-2.5 font-sans">HR Service Request Ticketing, Document Downloads</td></tr>
+                                            <tr class="bg-surface-50"><td class="p-2.5 font-bold text-slate-500">COULD HAVE</td><td class="p-2.5 font-sans">Employee Feedback, Company Announcements Board</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded bg-brand-600"></span> User Story & Acceptance Criteria
+                                </h3>
+                                <div class="bg-surface-50 border border-surface-200 rounded-lg p-3.5 text-xs space-y-2">
+                                    <span class="font-mono font-bold text-brand-600">US-001 — Apply Leave</span>
+                                    <p class="italic text-slate-600">"As an employee, I want to submit a leave request through the HR portal so that I can request time off without contacting HR directly."</p>
+                                    <div class="text-[11px] text-slate-500 space-y-0.5 pt-1 border-t border-surface-200 font-mono">
+                                        <p>• System calculates total days requested</p>
+                                        <p>• Automatically routes to designated manager</p>
+                                        <p>• Immutable once decision is finalized</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            },
+            'cs4': {
+                num: '04',
+                title: 'E-COMMERCE CHECKOUT & CONVERSION OPTIMISATION',
+                domain: 'Retail & E-Commerce',
+                pdfFile: 'Case_Study_04_Ecommerce.pdf',
+                focus: 'Data-Driven Business Analysis & Funnel Optimization',
+                type: 'Illustrative Portfolio Analysis',
+                summary: 'Diagnosed customer drop-off across the digital shopping funnel using SQL querying, Ishikawa fishbone root-cause, and A/B test experiments.',
+                snapshot: {
+                    problem: 'Severe drop-off between product discovery and completed orders costing customer lifetime value.',
+                    role: 'Data-Driven Business Analyst',
+                    approach: 'Funnel step-attrition modeling, SQL KPI querying, Ishikawa fishbone root cause, and A/B test design.',
+                    artifacts: 'Funnel Waterfall, SQL Queries, Fishbone Diagram, A/B Testing Matrix'
+                },
+                approachSteps: [
+                    { step: 'FUNNEL', desc: 'Analyzed 10,000 session visits through order completion' },
+                    { step: 'ISOLATE', desc: 'Identified critical 58.3% drop between Product & Add to Cart' },
+                    { step: 'SQL KPI', desc: 'Extracted 63.3% checkout conversion & payment fail rates' },
+                    { step: 'ROOT CAUSE', desc: 'Fishbone analysis across People, Pricing & Tech' },
+                    { step: 'HYPOTHESIS', desc: 'Formulated A/B experiment for sticky CTA & upfront fees' },
+                    { step: 'MEASURE', desc: 'Defined conversion lift targets and cart recovery metrics' }
+                ],
+                keyArtifactsStrip: [
+                    { name: 'Funnel Waterfall', desc: '6-stage customer drop-off quantification' },
+                    { name: 'SQL Extraction', desc: 'Database checkout conversion & payment method queries' },
+                    { name: 'Fishbone Diagram', desc: 'Ishikawa 6-category root cause breakdown' },
+                    { name: 'A/B Test Spec', desc: 'Version A baseline vs Version B persistent CTA test' },
+                    { name: 'KPI Dashboard', desc: 'Cart abandonment & payment failure tracking' }
+                ],
+                baRole: [
+                    'Analyzed 6-stage checkout funnel metrics to isolate drop-off points',
+                    'Wrote SQL queries against orders & payments tables to extract checkout conversion',
+                    'Conducted root-cause analysis using Ishikawa (Fishbone) diagram across 6 categories',
+                    'Identified primary 58.3% drop-off bottleneck between Product View and Add to Cart',
+                    'Defined A/B testing hypothesis, UX specifications, and primary success metrics',
+                    'Recommended prominent sticky Add-to-Cart CTA and upfront shipping transparency'
+                ],
+                baThinking: {
+                    problem: 'Leadership assumed drop-offs were primarily driven by payment gateway errors during final checkout.',
+                    analysis: 'Constructed an end-to-end user session funnel querying 10,000 visits from discovery to completion.',
+                    gap: 'Data proved the primary bottleneck occurred much earlier: a massive 58.3% drop between Product View and Add to Cart.',
+                    decision: 'Conducted a 6-branch Fishbone root-cause session and designed an A/B test prioritizing high-contrast sticky CTAs and visible delivery costs.',
+                    validation: 'Specified testing criteria with Add-to-Cart Conversion Rate as the primary success indicator.',
+                    value: 'Targeted recovery of abandoned checkout volume and measurable order conversion lift.'
+                },
+                renderDetails: function() {
+                    return `
+                        <!-- Visual Funnel Waterfall Breakdown -->
+                        <div class="space-y-3">
+                            <div class="flex items-baseline justify-between">
+                                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded bg-brand-600"></span> Customer Journey Funnel Drop-off Quantification
+                                </h3>
+                                <span class="text-[10px] font-mono text-slate-400">Illustrative Portfolio Analysis</span>
+                            </div>
+                            <div class="p-4 bg-white border border-surface-200 rounded-lg space-y-2 font-mono text-xs">
+                                <div class="p-2.5 bg-surface-100 rounded flex justify-between items-center">
+                                    <span class="font-bold text-surface-900">1. Website Visitors</span>
+                                    <span>10,000 (100%)</span>
+                                </div>
+                                <div class="text-right text-[10px] text-slate-500 pr-4">↓ 40% Drop-off (4,000 bounced)</div>
+                                <div class="p-2.5 bg-surface-100 rounded flex justify-between items-center">
+                                    <span class="font-bold text-surface-900">2. Product Views</span>
+                                    <span>6,000 (60.0%)</span>
+                                </div>
+                                <div class="text-right text-xs font-bold text-rose-600 pr-4 animate-pulse">
+                                    ↓ 58.3% CRITICAL BOTTLENECK (3,500 abandoned before cart)
+                                </div>
+                                <div class="p-2.5 bg-rose-50 border-2 border-rose-400 rounded flex justify-between items-center text-rose-950 font-bold">
+                                    <span>3. Add to Cart</span>
+                                    <span>2,500 (25.0%)</span>
+                                </div>
+                                <div class="text-right text-[10px] text-slate-500 pr-4">↓ 40% Drop-off (1,000 abandoned cart)</div>
+                                <div class="p-2.5 bg-surface-100 rounded flex justify-between items-center">
+                                    <span class="font-bold text-surface-900">4. Checkout Started</span>
+                                    <span>1,500 (15.0%)</span>
+                                </div>
+                                <div class="text-right text-[10px] text-slate-500 pr-4">↓ 30% Drop-off (450 failed payment)</div>
+                                <div class="p-2.5 bg-surface-100 rounded flex justify-between items-center">
+                                    <span class="font-bold text-surface-900">5. Payment Completed</span>
+                                    <span>1,050 (10.5%)</span>
+                                </div>
+                                <div class="p-2.5 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded flex justify-between items-center font-bold mt-2">
+                                    <span>6. Orders Completed</span>
+                                    <span>950 (9.5% Final Conversion)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SQL Extraction Scripts -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> SQL Data Extraction & Checkout KPI Modeling
+                            </h3>
+                            <div class="bg-surface-950 text-slate-300 p-4 rounded-lg font-mono text-xs overflow-x-auto space-y-2">
+                                <span class="text-slate-500">// Business Question 1: What is the true checkout conversion rate?</span>
+                                <p class="text-brand-400">SELECT ROUND(COUNT(CASE WHEN order_status = 'COMPLETED' THEN 1 END) * 100.0 / COUNT(*), 2) AS checkout_conversion_rate</p>
+                                <p class="text-white">FROM orders;</p>
+                                <p class="text-emerald-400 text-[11px] pt-1">// Result: 63.3% checkout conversion (36.7% abandoned during order initiation)</p>
+                            </div>
+                        </div>
+
+                        <!-- Ishikawa Fishbone Root-Cause & A/B Experiment Spec -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg text-xs space-y-3">
+                                <span class="font-mono font-bold text-surface-950 uppercase tracking-wider block">Ishikawa (Fishbone) Root Cause Categories</span>
+                                <ul class="space-y-1.5 text-slate-600">
+                                    <li><strong class="text-surface-900 font-mono">Product:</strong> Missing variant sizes & hidden return policy.</li>
+                                    <li><strong class="text-surface-900 font-mono">Process:</strong> Add-to-Cart button pushed below phone fold.</li>
+                                    <li><strong class="text-surface-900 font-mono">Pricing:</strong> Unexpected shipping taxes disclosed late.</li>
+                                    <li><strong class="text-surface-900 font-mono">Technology:</strong> Slow mobile page loading on 4G networks.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg text-xs space-y-3">
+                                <span class="font-mono font-bold text-surface-950 uppercase tracking-wider block">A/B Experiment Specification</span>
+                                <div class="space-y-2">
+                                    <div class="p-2 bg-white border rounded">
+                                        <span class="font-bold text-slate-700">Version A (Baseline):</span> Standard layout, low contrast CTA below screen fold.
+                                    </div>
+                                    <div class="p-2 bg-white border border-brand-300 rounded">
+                                        <span class="font-bold text-brand-600">Version B (Candidate):</span> Sticky high-contrast Add-to-Cart CTA & upfront shipping calculator.
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 font-mono">Success Metric: Add-to-Cart Conversion Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            },
+            'cs5': {
+                num: '05',
+                title: 'AI-POWERED DOCUMENT ASSISTANT',
+                domain: 'Artificial Intelligence & Operations',
+                pdfFile: 'Case_Study_05_AI_Assistant.pdf',
+                focus: 'AI Requirements Engineering & Governance Controls',
+                type: 'Simulated Business Analysis Case Study',
+                summary: 'Engineered functional requirements, confidence gating, and Human-in-the-Loop governance for enterprise Generative AI document extraction.',
+                snapshot: {
+                    problem: 'Manual document data extraction consuming thousands of hours with high data-entry error potential.',
+                    role: 'Lead Business Analyst (AI Governance & Requirements)',
+                    approach: 'Human-in-the-loop workflow modeling, AI-specific functional rules FR-001–008, and risk mitigation controls.',
+                    artifacts: 'AI Architecture Flow, FR-001–008 Requirements Catalog, AI Risk & Control Matrix'
+                },
+                approachSteps: [
+                    { step: 'INTAKE', desc: 'Secure multi-format document ingest (PDF/PNG)' },
+                    { step: 'EXTRACTION', desc: 'OCR & LLM key-value entity extraction' },
+                    { step: 'SUMMARIZE', desc: 'Concise executive synthesis & clause flags' },
+                    { step: 'EXCEPTION', desc: 'Automated threshold gate (<85% confidence)' },
+                    { step: 'HUMAN GATING', desc: 'Mandatory reviewer sign-off before persistence' },
+                    { step: 'POSTING', desc: 'Structured JSON payload commit to core ERP' }
+                ],
+                keyArtifactsStrip: [
+                    { name: 'HITL Flow', desc: '5-stage Human-in-the-Loop architectural blueprint' },
+                    { name: 'FR-001–008', desc: 'Specialized Generative AI functional specifications' },
+                    { name: 'FR-008 Control', desc: 'Mandatory Human Approval Gate non-negotiable rule' },
+                    { name: 'Risk Matrix', desc: 'Hallucination, Privacy, and Over-reliance controls' },
+                    { name: 'Evaluation KPIs', desc: 'Extraction accuracy and manual review rate metrics' }
+                ],
+                baRole: [
+                    'Defined AI document processing use cases across invoices and business forms',
+                    'Authored AI-specific Functional Requirements (FR-001 to FR-008)',
+                    'Established mandatory Human-in-the-Loop governance control (FR-008)',
+                    'Designed 5-stage AI exception routing and human validation workflow',
+                    'Constructed AI Risk & Control matrix covering hallucinations, privacy, and bias',
+                    'Specified evaluation metrics for extraction accuracy and human review rate'
+                ],
+                baThinking: {
+                    problem: 'Business leaders wanted to automate invoice processing using AI, but Compliance feared LLM hallucinations causing unauthorized disbursements.',
+                    analysis: 'Deconstructed the AI pipeline into structured extraction, deterministic validation, confidence scoring, and human validation.',
+                    gap: 'Purely automated AI pipelines lack legal accountability for financial commitments.',
+                    decision: 'Authored mandatory non-negotiable requirement FR-008: AI assists and flags, but a human operator must validate before downstream ERP write.',
+                    validation: 'Specified confidence score thresholds and an audit log capturing any manual override made by human reviewers.',
+                    value: 'Accelerated invoice processing time while eliminating unauthorized disbursement risk.'
+                },
+                renderDetails: function() {
+                    return `
+                        <!-- Core Philosophy Banner -->
+                        <div class="p-4 bg-surface-950 text-white rounded-lg text-center space-y-1">
+                            <span class="text-[10px] font-mono text-brand-400 uppercase tracking-widest font-bold">Non-Negotiable Governance Principle</span>
+                            <p class="text-sm sm:text-base font-light italic text-slate-200">
+                                "AI assists the business process; it does not replace human validation for important decisions."
+                            </p>
+                        </div>
+
+                        <!-- Human-in-the-Loop (HITL) Workflow -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> 5-Stage Human-in-the-Loop (HITL) Architecture
+                            </h3>
+                            <div class="p-4 bg-white border border-surface-200 rounded-lg text-xs font-mono">
+                                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-center">
+                                    <div class="p-2.5 bg-surface-50 border rounded">
+                                        <span class="text-[10px] text-slate-400 block">01 INGEST</span>
+                                        <span class="font-bold text-surface-900">Document Upload</span>
+                                    </div>
+                                    <div class="p-2.5 bg-surface-50 border rounded">
+                                        <span class="text-[10px] text-slate-400 block">02 OCR & LLM</span>
+                                        <span class="font-bold text-surface-900">AI Extraction</span>
+                                    </div>
+                                    <div class="p-2.5 bg-amber-50 border border-amber-200 rounded text-amber-900">
+                                        <span class="text-[10px] text-amber-600 block">03 VALIDATE</span>
+                                        <span class="font-bold">Exception Flagging</span>
+                                    </div>
+                                    <div class="p-2.5 bg-brand-50 border-2 border-brand-600 rounded text-brand-900">
+                                        <span class="text-[10px] text-brand-600 block font-bold">04 MANDATORY GATE</span>
+                                        <span class="font-bold">Human Review</span>
+                                    </div>
+                                    <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded text-emerald-900">
+                                        <span class="text-[10px] text-emerald-600 block">05 COMMIT</span>
+                                        <span class="font-bold">Final Processing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Functional Requirements (FR-001–008) -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> AI Functional Specifications (FR-001–FR-008)
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-001:</span> Extract key-value pairs (vendor, dates, totals).</div>
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-002:</span> Generate concise summary based on document context.</div>
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-003:</span> Identify missing or inconsistent fields via rule engine.</div>
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-004:</span> Display confidence scores for each extracted field.</div>
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-005:</span> Authorized human reviewer interface with source document side-by-side.</div>
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-006:</span> User ability to correct and re-annotate extracted tokens.</div>
+                                <div class="p-3 bg-surface-50 border rounded"><span class="font-mono font-bold text-brand-600">FR-007:</span> Persist validated payload to downstream ERP system.</div>
+                                <div class="p-3 bg-rose-50 border border-rose-300 rounded text-rose-900 font-bold"><span class="font-mono">FR-008 (CONTROL):</span> Non-negotiable human approval sign-off before final processing.</div>
+                            </div>
+                        </div>
+
+                        <!-- AI Risk & Control Matrix -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                                <span class="w-2 h-2 rounded bg-brand-600"></span> AI Governance Risk & Control Matrix
+                            </h3>
+                            <div class="border border-surface-200 rounded-lg overflow-hidden text-xs">
+                                <table class="w-full text-left font-mono">
+                                    <thead class="bg-surface-100 border-b border-surface-200 text-surface-900">
+                                        <tr>
+                                            <th class="p-3">Identified AI Risk</th>
+                                            <th class="p-3">Specified BA Control</th>
+                                            <th class="p-3">Validation Mechanism</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-surface-200 bg-white font-sans">
+                                        <tr>
+                                            <td class="p-3 font-semibold text-rose-700">Hallucinated Output</td>
+                                            <td class="p-3">Mandatory human review before persistence</td>
+                                            <td class="p-3 font-mono text-[11px]">Side-by-side source diff view</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-rose-700">Missing Critical Fields</td>
+                                            <td class="p-3">Automated schema validation flags incomplete payloads</td>
+                                            <td class="p-3 font-mono text-[11px]">Hard gating on mandatory keys</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-rose-700">Sensitive Data Exposure</td>
+                                            <td class="p-3">Role-based access control & PII masking rules</td>
+                                            <td class="p-3 font-mono text-[11px]">Security access policy audits</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-rose-700">Operator Over-Reliance</td>
+                                            <td class="p-3">Required active user verification click on line items</td>
+                                            <td class="p-3 font-mono text-[11px]">Audit log recording user sign-off</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        };
+
+        // Artifact definitions for the interactive library
+        const artifactDefs = {
+            'brd': {
+                cat: 'REQUIREMENTS ENGINEERING',
+                title: 'Business / Functional Requirements Document (BRD / FRD)',
+                what: 'Formal specification catalog capturing stakeholder intentions, functional behaviors, system actors, and scope constraints.',
+                why: 'Prevents requirement creep, aligns business and tech teams, and acts as the legal baseline for delivery sign-off.',
+                where: 'Case Study 01 (FR-001 through FR-012) & Case Study 05 (AI Functional Requirements FR-001–008).',
+                caseId: 'cs1'
+            },
+            'bpmn': {
+                cat: 'PROCESS & SYSTEMS MODELING',
+                title: 'BPMN 2.0 Business Process Swimlane Diagrams',
+                what: 'Standardized notation modeling actors, automated activities, decision gateways, and message flows across departmental boundaries.',
+                why: 'Identifies latency bottlenecks, unclear operational handoffs, and highlights process automation opportunities.',
+                where: 'Case Study 01 (SME Lending 4-Tier Swimlane: Borrower, Platform, Underwriting, Servicing).',
+                caseId: 'cs1'
+            },
+            'stories': {
+                cat: 'AGILE SPECIFICATION',
+                title: 'User Stories with Acceptance Criteria (Gherkin)',
+                what: 'User-centric requirement slice formulated as "As a... I want... So that..." backed by testable acceptance criteria.',
+                why: 'Ensures incremental value delivery in Agile sprints and gives engineering unambiguous definitions of "Done".',
+                where: 'Case Study 02 (Epics 1–4) & Case Study 03 (US-001 Leave, US-002 Attendance, US-003 HR Request).',
+                caseId: 'cs2'
+            },
+            'rtm': {
+                cat: 'QUALITY ASSURANCE & TRACEABILITY',
+                title: 'Requirement Traceability Matrix (RTM)',
+                what: 'Bi-directional tracking matrix mapping every Business Requirement to Functional Requirements, User Stories, and UAT Test Scenarios.',
+                why: 'Guarantees zero orphan requirements and ensures that every business goal is verified prior to production deployment.',
+                where: 'Case Study 01 (Full 6-column matrix linking digital application to UAT-001–006).',
+                caseId: 'cs1'
+            },
+            'sql': {
+                cat: 'DATA ANALYTICS & RECONCILIATION',
+                title: 'SQL Data Extraction & KPI Auditing',
+                what: 'Targeted relational database queries analyzing transactional behavior, funnel progression, and anomaly detection.',
+                why: 'Grounds business analysis in empirical facts rather than stakeholder assumptions.',
+                where: 'Case Study 01 (Payment reconciliation variance) & Case Study 04 (63.3% checkout conversion calculation).',
+                caseId: 'cs4'
+            },
+            'raci': {
+                cat: 'STAKEHOLDER GOVERNANCE',
+                title: 'RACI Governance Matrix',
+                what: 'Organizational model detailing who is Responsible, Accountable, Consulted, and Informed across every project phase.',
+                why: 'Prevents operational deadlocks and clarifies cross-functional ownership across complex multi-team initiatives.',
+                where: 'Case Study 01 (10-stage matrix spanning SME Borrowers, Underwriting, Operations, and Servicing).',
+                caseId: 'cs1'
+            },
+            'wireframe': {
+                cat: 'UX / JOURNEY BLUEPRINT',
+                title: 'UI Wireframes & Interaction Blueprints',
+                what: 'Low-to-medium fidelity structural mockups illustrating page hierarchy, navigation paths, and functional widgets.',
+                why: 'Validates workflow assumptions with end-users early before writing a single line of frontend code.',
+                where: 'Case Study 03 (Employee Self-Service HR Dashboard & Leave Management Layout).',
+                caseId: 'cs3'
+            },
+            'cr': {
+                cat: 'CHANGE CONTROL & GOVERNANCE',
+                title: 'Change Request (CR) Impact Analysis',
+                what: 'Structured assessment evaluating technical, operational, and financial ripple effects of proposed mid-flight changes.',
+                why: 'Protects delivery timelines, assesses regression risk, and ensures informed leadership approval.',
+                where: 'Case Study 01 (CR-001: Alternate digital repayment rails impact across Core Banking, UI, and Ops).',
+                caseId: 'cs1'
+            }
+        };
+
+        // Filter artifacts by category
+        function filterArtifacts(category, btnElement) {
+            const cards = document.querySelectorAll('.artifact-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update tab button styles
+            const buttons = document.querySelectorAll('.artifact-filter-btn');
+            buttons.forEach(btn => {
+                btn.className = 'artifact-filter-btn px-3 py-1.5 rounded bg-white border border-surface-200 text-slate-600 hover:text-surface-900 transition-all';
+            });
+            btnElement.className = 'artifact-filter-btn px-3 py-1.5 rounded bg-surface-900 text-white font-semibold transition-all';
+        }
+
+        // Open Case Study slide-over drawer
+        function openCaseStudy(id) {
+            const cs = caseStudies[id];
+            if (!cs) return;
+
+            document.getElementById('drawerBadge').innerText = `PROJECT ${cs.num} • ${cs.domain.toUpperCase()}`;
+            
+            const html = `
+                <!-- Header -->
+                <div class="border-b border-surface-200 pb-8">
+                    <span class="text-xs font-mono font-bold text-brand-600 uppercase tracking-widest">${cs.type}</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-surface-950 mt-2 mb-3 tracking-tight">${cs.title}</h2>
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">${cs.summary}</p>
+                </div>
+
+                <!-- 01 PROJECT SNAPSHOT -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg">
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Business Problem</span>
+                        <p class="text-xs text-slate-800 font-medium mt-1 leading-snug">${cs.snapshot.problem}</p>
+                    </div>
+                    <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg">
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">My BA Role</span>
+                        <p class="text-xs text-slate-800 font-medium mt-1 leading-snug">${cs.snapshot.role}</p>
+                    </div>
+                    <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg">
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Core Approach</span>
+                        <p class="text-xs text-slate-800 font-medium mt-1 leading-snug">${cs.snapshot.approach}</p>
+                    </div>
+                    <div class="p-4 bg-surface-50 border border-surface-200 rounded-lg">
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Key Deliverables</span>
+                        <p class="text-xs text-slate-800 font-medium mt-1 leading-snug">${cs.snapshot.artifacts}</p>
+                    </div>
+                </div>
+
+                <!-- 02 TAILORED BA APPROACH FLOW -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                        <span class="w-2 h-2 rounded bg-brand-600"></span> 02 — BA Approach & Delivery Pipeline
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-center">
+                        ${(cs.approachSteps || []).map((s, idx) => `
+                            <div class="p-3 bg-white border border-surface-200 rounded relative">
+                                <span class="text-[10px] font-mono text-brand-600 font-bold block">STEP 0${idx + 1}</span>
+                                <span class="text-xs font-bold text-surface-950 block mt-0.5">${s.step}</span>
+                                <p class="text-[10px] text-slate-500 mt-1 leading-tight">${s.desc}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- 03 MY BA CONTRIBUTION (Core Activities) -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                        <span class="w-2 h-2 rounded bg-brand-600"></span> 03 — My BA Contribution & Executed Deliverables
+                    </h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+                        ${(cs.baRole || []).map(r => `
+                            <li class="p-2.5 bg-white border border-surface-200 rounded flex items-start gap-2 shadow-2xs">
+                                <i class="fas fa-check text-brand-600 mt-0.5 text-[10px]"></i>
+                                <span>${r}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+
+                <!-- 04 KEY ARTIFACTS STRIP -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold text-slate-900 uppercase tracking-widest font-mono flex items-center gap-2">
+                        <span class="w-2 h-2 rounded bg-brand-600"></span> 04 — Core BA Artifacts Produced
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                        ${(cs.keyArtifactsStrip || []).map(a => `
+                            <div class="p-3 bg-surface-50 border border-surface-200 rounded">
+                                <span class="font-mono text-xs font-bold text-surface-900 block">${a.name}</span>
+                                <span class="text-[11px] text-slate-500 mt-0.5 block">${a.desc}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- 05 DETAILED EVIDENCE AND TECHNICAL MODELS -->
+                <div class="pt-4 border-t border-surface-200 space-y-8">
+                    ${cs.renderDetails ? cs.renderDetails() : ''}
+                </div>
+
+                <!-- 06 BA REASONING (HOW I APPROACHED THE PROBLEM) -->
+                ${cs.baThinking ? `
+                <div class="p-6 bg-surface-950 text-white rounded-lg space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                        <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-brand-400">Senior BA Problem-Solving Narrative</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-light text-slate-300 leading-relaxed">
+                        <div>
+                            <span class="font-mono text-white font-bold block text-[11px] mb-1">THE BUSINESS PROBLEM</span>
+                            <p>${cs.baThinking.problem}</p>
+                        </div>
+                        <div>
+                            <span class="font-mono text-white font-bold block text-[11px] mb-1">ANALYSIS & IDENTIFIED GAP</span>
+                            <p>${cs.baThinking.analysis} ${cs.baThinking.gap}</p>
+                        </div>
+                        <div>
+                            <span class="font-mono text-white font-bold block text-[11px] mb-1">REQUIREMENT & DESIGN DECISION</span>
+                            <p>${cs.baThinking.decision}</p>
+                        </div>
+                        <div>
+                            <span class="font-mono text-white font-bold block text-[11px] mb-1">VALIDATION & EXPECTED BUSINESS VALUE</span>
+                            <p>${cs.baThinking.validation} ${cs.baThinking.value}</p>
+                        </div>
+                    </div>
+                </div>
+                ` : ''}
+
+                <!-- SIMULATED PORTFOLIO DISCLAIMER -->
+                <div class="p-3 bg-surface-100 border-l-4 border-slate-400 text-slate-600 text-xs font-mono">
+                    Simulated portfolio case study — outcomes represent expected benefits and illustrative analysis, not actual production results.
+                </div>
+
+                <!-- BOTTOM CTA: EXPLORE THE COMPLETE CASE STUDY -->
+                <div class="p-8 bg-surface-950 text-white rounded-lg border border-surface-800 space-y-4">
+                    <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest block font-bold">
+                        COMPLETE CASE STUDY DOCUMENTATION
+                    </span>
+                    <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                        EXPLORE THE COMPLETE CASE STUDY
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed font-light">
+                        Review the complete Business Analysis documentation, including requirements, process models, business rules, user stories, traceability, analysis, validation, and supporting artifacts.
+                    </p>
+                    <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">
+                        <a href="${cs.pdfFile}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-white text-surface-950 hover:bg-slate-200 font-mono font-bold text-xs uppercase tracking-wider rounded transition-colors shadow-sm">
+                            <i class="fas fa-file-pdf text-brand-600"></i> VIEW FULL CASE STUDY →
+                        </a>
+                    </div>
+                    <p class="text-[11px] text-slate-400 font-mono italic pt-1">
+                        PDF • Complete BA Documentation (opens in a new browser tab)
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('drawerContent').innerHTML = html;
+            document.getElementById('caseStudyDrawer').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeCaseStudy() {
+            document.getElementById('caseStudyDrawer').classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        // PDF notice interaction handler
+        function handlePdfNotice(num) {
+            const el = document.getElementById(`pdfStatusMsg_${num}`);
+            if (el) {
+                el.innerText = "PDF ready. Document link will be enabled once deployed on your hosting server.";
+                el.classList.add('text-brand-400');
+            }
+        }
+
+        // Artifact inspection drawer handler
+        function inspectArtifact(key) {
+            const a = artifactDefs[key];
+            if (!a) return;
+            document.getElementById('artCategory').innerText = a.cat;
+            document.getElementById('artTitle').innerText = a.title;
+            document.getElementById('artWhat').innerText = a.what;
+            document.getElementById('artWhy').innerText = a.why;
+            document.getElementById('artWhere').innerText = a.where;
+            
+            const btn = document.getElementById('artActionBtn');
+            btn.onclick = function() {
+                closeArtifactModal();
+                openCaseStudy(a.caseId);
+            };
+
+            document.getElementById('artifactModal').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeArtifactModal() {
+            document.getElementById('artifactModal').classList.add('hidden');
+            if (document.getElementById('caseStudyDrawer').classList.contains('hidden')) {
+                document.body.classList.remove('modal-open');
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Keyboard escape listener
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCaseStudy();
+                closeArtifactModal();
+            }
+        });
+    </script>
+</body>
+</html>
